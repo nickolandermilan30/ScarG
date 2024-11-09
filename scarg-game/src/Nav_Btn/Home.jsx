@@ -10,14 +10,10 @@ const Home = () => {
     <div className="min-h-screen flex flex-col justify-between">
       <Header /> 
 
-      <main className="flex-grow">
-
-      <Carousel />
-
-      <Search />
-
-      <Games />
-      
+      <main className="flex-grow mt-16 mb-16"> {/* Adds bottom margin to avoid overlap with Navbar */}
+        <Carousel />
+        <Search />
+        <Games />
       </main>
 
       <Navbar /> 

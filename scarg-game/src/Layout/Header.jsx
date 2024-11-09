@@ -3,7 +3,7 @@ import Profile from '../assets/Navbar_icon/PFP.jpg';
 
 const Header = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-white text-gray-800 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-white text-gray-800 shadow-lg z-10">
       <div className="text-2xl font-bold font-trade-winds" style={{ color: '#6789FC' }}>
         ScarG
       </div>
