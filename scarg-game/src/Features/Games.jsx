@@ -10,7 +10,7 @@ import game6 from '../assets/Games_Img/game6.png';
 import game7 from '../assets/Games_Img/game7.png';
 import game8 from '../assets/Games_Img/game8.png';
 
-const games = [
+const gamesData = [
   { id: 'Roblox', img: game1 },
   { id: 'ZZZ', img: game2 },
   { id: 'Star Rail', img: game3 },
@@ -21,7 +21,7 @@ const games = [
   { id: 'Garena Undawn', img: game8 },
 ];
 
-const Games = () => {
+const Games = ({ searchTerm }) => {
   const [favorites, setFavorites] = useState({});
 
   const toggleFavorite = (gameId) => {
@@ -31,9 +31,13 @@ const Games = () => {
     }));
   };
 
+  const filteredGames = gamesData.filter((game) =>
+    game.id.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="p-4 grid grid-cols-3 gap-4">
-      {games.map((game) => (
+      {filteredGames.map((game) => (
         <div key={game.id} className="relative flex flex-col items-center group">
           <img
             src={game.img}

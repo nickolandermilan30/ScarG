@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './Nav_Btn/Home';
-import './index.css'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Game_page';
+import Filter from './Pages/Filter';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/filter" element={<Filter />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
