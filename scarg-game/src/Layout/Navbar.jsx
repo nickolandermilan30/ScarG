@@ -10,14 +10,14 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleGamesClick = () => {
-    navigate('/'); // Navigate to the Home page
+    navigate('/'); 
   };
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-md">
       <div className="flex justify-around items-center py-2">
         <button
-          onClick={handleGamesClick} // Attach the click handler
+          onClick={handleGamesClick}
           className="flex flex-col items-center text-blue-500 hover:text-blue-800"
         >
           <img

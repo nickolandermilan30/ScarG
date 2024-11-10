@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Header from '../Layout/Header';
 import Navbar from '../Layout/Navbar';
-import Main from '../Filter_items/Filter_main';
+import FILTER from '../Filter_items/Filter_main';
+import Game_Provider from '../Filter_items/Game_provider';
 
 const Filter = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +12,9 @@ const Filter = () => {
       <Header />
 
       <main className="flex-grow mt-16 mb-16">
-        <Main />
+        <FILTER />
+        <Game_Provider/>
+
       </main>
 
       <Navbar />
