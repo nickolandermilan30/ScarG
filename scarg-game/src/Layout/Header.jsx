@@ -1,5 +1,6 @@
 import React from 'react';
 import Profile from '../assets/Navbar_icon/PFP.jpg';
+import StellarIcon from '../assets/Navbar_icon/Stellar.png'; // Import the desired image
 
 const Header = () => {
   return (
@@ -8,9 +9,12 @@ const Header = () => {
         ScarG
       </div>
       <div className="flex items-center space-x-4">
-        <span className="text-xl font-semibold" style={{ color: '#6789FC' }}>
-          $1,190.6
-        </span>
+        <div className="flex items-center space-x-1">
+          <img src={StellarIcon} alt="Stellar Icon" className="w-7 h-7 mr-1" /> {/* Small icon */}
+          <span className="text-xl font-semibold" style={{ color: '#6789FC' }}>
+           $ 1,190.6
+          </span>
+        </div>
         <div className="flex items-center justify-center w-8 h-8 border-2 rounded-full overflow-hidden" style={{ borderColor: '#6789FC' }}>
           <img
             src={Profile}

@@ -13,6 +13,10 @@ const Navbar = () => {
     navigate('/'); 
   };
 
+  const handleFavoriteClick = () => {
+    navigate('/favorite'); // Navigate to the Favorite page
+  };
+
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-md">
       <div className="flex justify-around items-center py-2">
@@ -28,7 +32,10 @@ const Navbar = () => {
           <span className="text-xs">Games</span>
         </button>
 
-        <button className="flex flex-col items-center text-blue-500 hover:text-blue-800">
+        <button
+          onClick={handleFavoriteClick}
+          className="flex flex-col items-center text-blue-500 hover:text-blue-800"
+        >
           <img
             src={FavoriteImage}
             alt="Favorite"
